@@ -1,6 +1,7 @@
 import React from 'react'
 import { Navbar,Nav,Form,FormControl} from 'react-bootstrap';
 import ReactStars from "react-rating-stars-component";
+import { Link } from 'react-router-dom'
 
 
 export default function NavBar({setInput,setSearchRate}) {
@@ -14,9 +15,8 @@ export default function NavBar({setInput,setSearchRate}) {
              <Navbar bg="dark" variant="dark">
               <Navbar.Brand href="#home">Movie Card</Navbar.Brand>
               <Nav className="mr-auto">
-                <Nav.Link href="#home">Acceuil</Nav.Link>
-                <Nav.Link href="#features">Catégories</Nav.Link>
-                <Nav.Link href="#pricing">A props</Nav.Link>
+                <Link to="/"><Nav.Link href="#home">Acceuil</Nav.Link></Link>
+              
               </Nav>
               <Form inline>
               <ReactStars
